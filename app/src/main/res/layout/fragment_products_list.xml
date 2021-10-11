@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productsList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/shoppingSection"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_product" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shoppingSection"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#79FFA91E"
+        android:elevation="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/shoppingIcon"
+            android:layout_width="@dimen/large_100"
+            android:layout_height="@dimen/large_100"
+            android:layout_marginStart="@dimen/medium_100"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/shoppingSection"
+            app:layout_constraintStart_toStartOf="@id/shoppingSection"
+            app:layout_constraintTop_toTopOf="@id/shoppingSection"
+            app:srcCompat="@drawable/ic_shopping" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/numberOfProducts"
+            style="@style/reg_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_100"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/shoppingSection"
+            app:layout_constraintStart_toEndOf="@id/shoppingIcon"
+            app:layout_constraintTop_toTopOf="@id/shoppingSection"
+            tools:text="23 varer" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalPrice"
+            style="@style/medium_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/medium_100"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/shoppingSection"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/shoppingSection"
+            tools:text="kr 123 123.12" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/circular_progress_size"
+        android:layout_height="@dimen/circular_progress_size"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

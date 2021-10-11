@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Oda</string>
+    <string name="not_available">Not Available</string>
+    <string name="product_image">Product Image</string>
+    <string name="remove_button">Remove Button</string>
+    <string name="add_button">Add Button</string>
+</resources>

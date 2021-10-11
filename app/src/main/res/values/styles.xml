@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+
+    <style name="OdaText">
+        <item name="android:textDirection">ltr</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="medium_16" parent="OdaText">
+        <item name="fontFamily">Roboto</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="reg_16" parent="OdaText">
+        <item name="fontFamily">Roboto</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="reg_12" parent="OdaText">
+        <item name="fontFamily">Roboto</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+
+</resources>

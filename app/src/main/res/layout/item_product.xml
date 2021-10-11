@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/large_200"
+        android:layout_height="@dimen/large_200"
+        android:layout_marginStart="@dimen/medium_100"
+        android:contentDescription="@string/product_image"
+        android:src="@drawable/ic_place_holder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/name"
+        style="@style/medium_16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_100"
+        android:layout_marginTop="@dimen/small_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Product Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/promotion"
+        style="@style/reg_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_50"
+        android:background="@drawable/item_shopping_status_background"
+        android:padding="@dimen/small_50"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        tools:text="promotion" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/extraInfo"
+        style="@style/reg_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_100"
+        android:layout_marginTop="@dimen/small_100"
+        android:textColor="@color/text_normal"
+        app:layout_constraintStart_toEndOf="@id/promotion"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_goneMarginStart="0dp"
+        tools:text="Extra Info" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sizeInfo"
+        style="@style/reg_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_100"
+        android:layout_marginTop="@dimen/small_100"
+        android:textColor="@color/text_normal"
+        app:layout_constraintStart_toEndOf="@id/extraInfo"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        tools:text="Size Info" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/grossPrice"
+        style="@style/reg_16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_150"
+        android:layout_marginBottom="@dimen/medium_100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@+id/extraInfo"
+        tools:text="Gross Price" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/totalPrice"
+        style="@style/reg_16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_100"
+        android:textColor="@color/text_normal"
+        app:layout_constraintBottom_toBottomOf="@id/grossPrice"
+        app:layout_constraintStart_toEndOf="@id/grossPrice"
+        app:layout_constraintTop_toTopOf="@id/grossPrice"
+        tools:text="Unit Price" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/notAvailableBadge"
+        style="@style/reg_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_50"
+        android:layout_marginEnd="@dimen/medium_100"
+        android:background="@drawable/item_shopping_not_available_background"
+        android:padding="@dimen/small_100"
+        android:text="@string/not_available"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/grossPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/grossPrice" />
+
+    <ImageView
+        android:id="@+id/addButton"
+        android:layout_width="@dimen/large_100"
+        android:layout_height="@dimen/large_100"
+        android:layout_marginEnd="@dimen/medium_100"
+        android:background="@drawable/item_shopping_button_bold_background"
+        android:contentDescription="@string/add_button"
+        android:padding="@dimen/small_100"
+        android:src="@drawable/ic_add_purple"
+        app:layout_constraintBottom_toBottomOf="@id/grossPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/grossPrice" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/counter"
+        style="@style/reg_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/small_100"
+        app:layout_constraintBottom_toBottomOf="@id/addButton"
+        app:layout_constraintEnd_toStartOf="@+id/addButton"
+        app:layout_constraintTop_toTopOf="@id/addButton"
+        tools:text="12" />
+
+    <ImageView
+        android:id="@+id/removeButton"
+        android:layout_width="@dimen/large_100"
+        android:layout_height="@dimen/large_100"
+        android:layout_marginEnd="@dimen/small_100"
+        android:background="@drawable/item_shopping_button_normal_background"
+        android:contentDescription="@string/remove_button"
+        android:padding="@dimen/small_100"
+        android:src="@drawable/ic_remove"
+        app:layout_constraintBottom_toBottomOf="@id/addButton"
+        app:layout_constraintEnd_toStartOf="@+id/counter"
+        app:layout_constraintTop_toTopOf="@id/addButton" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/gray3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
